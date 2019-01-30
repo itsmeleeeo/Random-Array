@@ -18,15 +18,12 @@
     function arrayRandomico () {
 
         let  nomes = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','w','y','z']
-        let embaralhar  = nomes[Math.floor(Math.random() * nomes.length)]
+        let embaralhar  = Math.floor(Math.random() * nomes.length)
 
             document.getElementById('btn_alterar').addEventListener('click', () => {
                 document.getElementById('saida').value = nomes[embaralhar];
                 
-                if(embaralhar<25)
-                    embaralhar++
-                 else 
-                    embaralhar = 0
+                embaralhar = Math.floor(Math.random() * nomes.length)
 
             }); 
     }
